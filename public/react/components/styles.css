@@ -1,0 +1,141 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+}
+
+body {
+  padding: 15px;
+  background-color: var(--color-blue);
+}
+
+/* Color Palette */
+:root {
+  --color-dark: #0c090d;
+  --color-pink: #e01a4f;
+  --color-orange: #f15946;
+  --color-yellow: #f9c22e;
+  --color-blue: #53b3cb;
+}
+
+/* Header */
+.header {
+  background-color: var(--color-blue);
+  color: var(--color-dark);
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Sections */
+.item-section
+
+
+/* Container */
+div.container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Individual Items */
+div.container > div {
+  border: 1px solid #d5dbdb;
+  border-radius: 3px;
+  max-width: 200px;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Grid layout for image, details, and buttons */
+  gap: 5px;
+  align-items: center;
+}
+
+div.container > div > img {
+  z-index: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  max-width: 100%;
+}
+
+div.container > div > label,
+div.container > div > h3 {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Button Styling */
+div.container > div > button {
+  border: 1px solid var(--color-orange);
+  border-radius: 3px;
+  color: var(--color-dark);
+  font-weight: 500;
+  background-color: var(--color-yellow);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+div.container > div > button:hover {
+  background-color: var(--color-pink);
+  color: var(--color-yellow);
+  border-color: var(--color-dark);
+}
+
+/* Form Container */
+.form-container {
+  background-color: var(--color-pink);
+  color: var(--color-dark);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 500px; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Elements */
+.form-container form {
+  display: grid;
+  gap: 10px;
+}
+
+.form-container label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container textarea {
+  padding: 8px;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-container input[type="submit"],
+.form-container button {
+  background-color: var(--color-blue);
+  color: var(--color-yellow);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover,
+.form-container button:hover {
+  background-color: var(--color-orange);
+}
+
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
